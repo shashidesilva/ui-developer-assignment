@@ -1,0 +1,13 @@
+{
+  "name": "ui-developer-excercise",
+  "version": "1.0.0",
+  "description": "This is an exercise for UI developer",
+  "main": "index.html",
+  "author": "Shashi de Silva",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}

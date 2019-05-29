@@ -15,9 +15,9 @@ body {
 
 .info-container {
     > div[class*="col-sm"] {
-        > div[class*="wrapper"] {
-            border: 1px solid @border-color;
-        }
+        // > div[class*="wrapper"] {
+        //     border: 1px solid @border-color;
+        // }
     }
     .user-content {
         .user-icon {
@@ -28,7 +28,7 @@ body {
 
 .navbar,
 .footer-content {
-    background-color: @primary-color-05;
+    background-color: @primary-color-02;
 }
 
 .navbar {
@@ -41,6 +41,30 @@ body {
             }
         }
     }
+}
+
+.thumbnail {
+    box-shadow: none;
+    border: 1px solid @border-color;
+    background-color: @primary-color-02;
+    border-radius: 0;
+}
+
+.list-group {
+    border-radius: 0;
+    box-shadow: none;
+    
+    .list-group-item {
+        background-color: @primary-color-02;
+        border: none;
+        .checkbox {
+            margin: 0;
+        }
+    }
+}
+
+.btn-block {
+    text-align: center;
 }
 
 
@@ -58,13 +82,14 @@ body {
         border-bottom: 1px solid @border-color;
         border-radius: 0;
         a {
-            color: @primary-color-01;
+            color: @primary-color-04;
         }
 
         .nav > li {
             > a {
                 &:hover {
-                    background-color: @primary-color-05;
+                    background-color: @primary-color-02;
+                    text-decoration: underline;
                 }
             }
         }
@@ -79,17 +104,14 @@ body {
     .footer-content {
         border-top: 1px solid @border-color;
     }
-
-    .info-container {
-        margin: 30px 0;
-        > div[class*="col-sm"] {
-            padding: @info-container-padding;
-        }
-    }
 }
 
 @media screen and (max-width: 1199px) and (min-width: 768px) {
     .button-size(@btn-width-small, @btn-signup-margin-small);
+
+    .thumbnail {
+        padding: @thumbnail-padding-desktop;
+    }
 }
 
 @media only screen and (max-width: 767px) {

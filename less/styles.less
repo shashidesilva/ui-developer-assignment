@@ -14,11 +14,6 @@ body {
 }
 
 .info-container {
-    > div[class*="col-sm"] {
-        // > div[class*="wrapper"] {
-        //     border: 1px solid @border-color;
-        // }
-    }
     .user-content {
         .user-icon {
             text-align: center;
@@ -57,6 +52,8 @@ body {
     .list-group-item {
         background-color: @primary-color-02;
         border: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
         .checkbox {
             margin: 0;
         }
@@ -67,9 +64,19 @@ body {
     text-align: center;
 }
 
+.footer-content {
+    border-top: 1px solid @border-color;
+    text-align: center;
 
-@media only screen and (min-width: 1200px) {
-    .button-size(@btn-width-desktop, @btn-signup-margin-desktop);
+    .pagination {
+        > li {
+            > a {
+                background-color: @primary-color-02;
+                text-decoration: underline;
+                border: none;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -101,8 +108,10 @@ body {
         }
     }
 
-    .footer-content {
-        border-top: 1px solid @border-color;
+    .thumbnail {
+        .media {
+            margin-bottom: @content-media-margin-bottom-desktop;
+        }
     }
 }
 
@@ -110,7 +119,45 @@ body {
     .button-size(@btn-width-small, @btn-signup-margin-small);
 
     .thumbnail {
+        padding: @thumbnail-padding-small;
+    }
+    .list-content {
+        .thumbnail {
+            padding: @list-thumbnail-padding-small;
+            .btn-default {
+                width: 55%;
+            }
+        }
+    }
+
+    .media {
+        .media-left {
+            padding-right: @content-media-padding-left-small;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .button-size(@btn-width-desktop, @btn-signup-margin-desktop);
+
+    .thumbnail {
         padding: @thumbnail-padding-desktop;
+
+        .btn-default {
+            width: 30%;
+        }
+    }
+
+    .list-content {
+        .thumbnail {
+            padding: @list-thumbnail-padding-desktop;
+        }
+    }
+
+    .media {
+        .media-left {
+            padding-right: @content-media-padding-left-desktop;
+        }
     }
 }
 
@@ -122,4 +169,25 @@ body {
     }
 
     .button-size(@btn-width-mobile, @btn-signup-margin-mobile);
+
+    .navbar {
+        display: none;
+    }
+
+    .media {
+        .media-left {
+            text-align: center;
+            display: block;
+        }
+        .media-body {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+
+    .thumbnail {
+        padding: 25px;
+    }
+
 }

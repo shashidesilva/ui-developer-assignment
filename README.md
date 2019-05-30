@@ -26,6 +26,8 @@ Steps to up the pages
 
 
 ++++++++++++++++ commands +++++++++++++++++
+
+
 create package.json
 
     npm init
